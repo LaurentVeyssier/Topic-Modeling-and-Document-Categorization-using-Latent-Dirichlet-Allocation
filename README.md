@@ -1,6 +1,7 @@
 # Topic-Modeling-and-Document-Categorization-using-Latent-Dirichlet-Allocation
 Categorize documents per topics inferred by LDA approach
 
+![](asset/topics.jpg)
 
 # Description
 This project classifies news headlines among a set of topics determined by the LDA algorithm.
