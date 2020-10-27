@@ -1,4 +1,4 @@
-# Topic-Modeling-and-Document-Categorization-using-Latent-Dirichlet-Allocation-or-LDA
+# Topic-Modeling-and-Document-Categorization-using-Latent-Dirichlet-Allocation
 Categorize documents per topics inferred by LDA approach
 
 
