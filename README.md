@@ -24,6 +24,18 @@ Two separate notebooks are provided in the repo, one for each of the datasets.
 
 # LDA
 
+Topic modeling and document categorization can be summarized in two steps:
+- identify the distribution of to-be-determined topics in the documents analyzed
+- identify the distribution of words or cluster of words in these topics
+
+![](asset/image3.png)                ![](asset/image1.png)
+
+Latent Dirichlet Allocation is fundamentally factorizing the Bag of Words matrix (documents x vocabulary (all the unique words) with aij being the occurence) into two smaller matrices. One representing thd documents x the topics and one reprssenting the topics x the vocabulary of words. This is illustrated below. Those matrices are representative of two Dirichlet distributions.
+- Distribution alpha will tell us what documents are associated with the topics (topic per document model).
+- Distribution beta will tell us what words are associated with these topics (words per topic model).
+
+![](asset/factorization.png)
+
 There are two hyperparameters that control document and topic similarity, known as alpha and beta, respectively. A low value of alpha will assign fewer topics to each document whereas a high value of alpha will have the opposite effect. A low value of beta will use fewer words to model a topic whereas a high value will use more words, thus making topics more similar between them.
 
 A third hyperparameter has to be set when implementing LDA, namely, the number of topics the algorithm will detect since LDA cannot decide on the number of topics by itself.
