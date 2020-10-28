@@ -30,7 +30,7 @@ Topic modeling and document categorization can be summarized in two steps:
 
 ![](asset/image3.png)                ![](asset/image1.png)
 
-Latent Dirichlet Allocation is fundamentally factorizing the Bag of Words matrix (documents x vocabulary (all the unique words) with aij being the occurence) into two smaller matrices. One representing thd documents x the topics and one reprssenting the topics x the vocabulary of words. This is illustrated below. Those matrices are representative of two Dirichlet distributions.
+Latent Dirichlet Allocation is fundamentally factorizing the Bag of Words matrix [documents x vocabulary (all the unique words) with aij being the occurence] into two smaller matrices. One representing the documents x the topics and one representing the topics x the vocabulary of words. This matrix factorization is illustrated below. Those matrices are associated with two Dirichlet distributions.
 - Distribution alpha will tell us what documents are associated with the topics (topic per document model).
 - Distribution beta will tell us what words are associated with these topics (words per topic model).
 
