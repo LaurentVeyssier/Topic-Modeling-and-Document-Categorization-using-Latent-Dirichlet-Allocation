@@ -51,6 +51,7 @@ gensim and nltk librairies are used in the project.
 The categorization using the dataset of Facebook posts is extremely convincing with clear, delimited and disjoint topic spheres. See illustration below on a few examples.
 This could be explained by the higher quality and greater length of the text pieces (posts vs headlines) giving the model better materials to extract features from words.
 The topics are also clearer using tf-idf weighting technique.
+This certainly confirms that the consistency and quality of the input texts have a strong impact of the quality of the output. Texts sharing similar editorial rules (coming from the same organization, company or other body) and focusing on single topics at a time will likely perform very well.
 
 The allocation of unseen text to the determined topics is also very good.
 
