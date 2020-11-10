@@ -24,11 +24,19 @@ Two separate notebooks are provided in the repo, one for each of the datasets.
 
 # LDA
 
+Latent means hidden, Dirichlet is a type of probability distribution. Latent Dirichlet Allocation means that we are trying to find all the probability distributions and they are hidden.
+
 Topic modeling and document categorization can be summarized in two steps:
 - identify the distribution of to-be-determined topics in the documents analyzed
 - identify the distribution of words or cluster of words in these topics
 
 ![](asset/image3.png)                ![](asset/image1.png)
+
+In other simple words, we want LDA to learn the topic mix in each document and the word mix in each topic.
+- Choose the number of topics we think there are in the entire data set (example: num_topics = 2).
+- Randomly assign each word in each document to one of two topics (example: the word “football” is randomly assigned to Topic B which is politics-like topic)
+- Go through every word and its topic assignment in each document. Look at 1) how often the topic occurs in the doc and 2) how often the word occurs in the topic overall. Based on this information, assign the word a new topic (example: it looks like “football” does not occur often in Topic B, so the word “football” probably should be assigned to Topic A).
+- Go through multiple iteration of this. Eventually the topics will start making sense in a way that we could interpret them and give them themes.
 
 Latent Dirichlet Allocation is fundamentally factorizing the Bag of Words matrix [documents x vocabulary (all the unique words) with aij being the occurence] into two smaller matrices. One representing the documents x the topics and one representing the topics x the vocabulary of words. This matrix factorization is illustrated below. Those matrices are associated with two Dirichlet distributions.
 - Distribution alpha will tell us what documents are associated with the topics (topic per document model).
