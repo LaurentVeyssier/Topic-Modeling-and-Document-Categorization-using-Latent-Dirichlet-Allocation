@@ -6,9 +6,11 @@ Categorize documents per topics inferred by LDA approach
 # Description
 This project classifies text (news headlines or Facebook posts) into overarching themes which are determined by the Latent Dirichlet Allocation algorithm.
 
-In machine learning, a topic model is specifically defined as a natural language processing technique used to discover hidden semantic structures of text in a collection of documents, usually called corpus. In general, each document refers to a continuous set of words, like a paragraph or an article, where each article contains a set of words.
+In machine learning, a topic model is specifically defined as a natural language processing technique used to discover hidden semantic structures of text in a collection of documents, usually called corpus. In general, each document refers to a continuous set of words, like a paragraph or an article, where each article contains a set of words. Topic Modeling is the process to automatically identify topics present in a text object and to derive hidden patterns exhibited by a text corpus. It is an unsupervised approach used for finding and observing the bunch of words (called “topics”) in large clusters of texts. Topics can be defined as “a repeating pattern of co-occurring terms in a corpus”, like Healthcare would be with words like "doctors", "health", "medicine", "patient", "hospital",...Topic Models are very useful for the purpose for document clustering, organizing large blocks of textual data, information retrieval from unstructured text and feature selection.
 
-Latent Dirichlet Allocation (LDA) is an unsupervised machine learning approach used to classify text in a document to a particular topic.
+![](asset/Modeling.png)
+
+Latent Dirichlet Allocation (LDA) is the unsupervised machine learning approach used to classify text in a document to a particular topic.
 
 For that purpose, it builds a topic per document model and words per topic model, modeled as Dirichlet distributions.
 Each document is modeled as a multinomial distribution of topics and each topic is modeled as a multinomial distribution of words.
