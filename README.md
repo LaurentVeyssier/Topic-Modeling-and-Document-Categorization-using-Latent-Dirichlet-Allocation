@@ -16,6 +16,8 @@ For that purpose, it builds a topic per document model and words per topic model
 Each document is modeled as a multinomial distribution of topics and each topic is modeled as a multinomial distribution of words.
 LDA assumes that the every chunk of text we feed into it will contain words that are somehow related. Words will allow us to categorize each document to a particular topic or a theme. Therefore choosing the right corpus of data is crucial. It also assumes documents are produced from a mixture of topics. Those topics then generate words based on their probability distribution.
 
+When we do topic modelling, we have to think about topics as a very high-level concept. A topic will gather information which can be broader in scope but still belonging to a more general theme. From the perspective of topic modelling, this is all just one category. In general, classification models that start with labelled categories support much finer distinctions than topic modelling. This is part of the trade-off between supervised and unsupervised learning. The output of such an unsupervised technique is not as precise as the predictions of a text classifier. A supervised technique will allow predictions which cannot be achieved with an unsupervised approach.
+
 # Dataset
 
 I used two separate datasets to test the model.
