@@ -26,9 +26,13 @@ Two separate notebooks are provided in the repo, one for each of the datasets.
 
 # LDA
 
-Latent means hidden, Dirichlet is a type of probability distribution. Latent Dirichlet Allocation means that we are trying to find all the probability distributions and they are hidden.
+Latent means hidden, Dirichlet is a type of probability distribution. Latent Dirichlet Allocation means that we are trying to find all the probability distributions and they are hidden. Let’s break this name down to see what it means:
 
-Topic modeling and document categorization can be summarized in two steps:
+- First, the topics are unseen, unobserved. In other words, the model looks at a bunch of documents and tries to figure out the topics that best explain where those documents come from. This is what latent means: the topics are hypothesized.
+- Second, Dirichlet is a kind of probability distribution. So this just refers to the specific type of probability distribution that is being used to estimate the prior probability of each unseen topic. What is a prior probability? Think about it this way: we’re trying to guess which topics best describe the data set. For each document we look at, we have our current best guess. Then, we update our guess based on what we find. So, the Dirichlet is the specific probability distribution that we use to represent our current best guess about topics.
+- Third, allocation means that we’re trying to spread words around into the topics they belong to. What is the probability that “smog” or “record high” are a part of the CLIMATE topic? This allocation is similar to dimension reduction (if you are familiar with principal components analysis): which words can be joined together to form a single topic, where the aggregate topic is more meaningful than the individual words that make it up?
+
+So Topic modeling and document categorization can be summarized in two steps:
 - identify the distribution of to-be-determined topics in the documents analyzed
 - identify the distribution of words or cluster of words in these topics
 
