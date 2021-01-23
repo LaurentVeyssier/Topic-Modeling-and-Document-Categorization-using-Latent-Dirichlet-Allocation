@@ -16,6 +16,23 @@ For that purpose, it builds a topic per document model and words per topic model
 Each document is modeled as a multinomial distribution of topics and each topic is modeled as a multinomial distribution of words.
 LDA assumes that the every chunk of text we feed into it will contain words that are somehow related. Words will allow us to categorize each document to a particular topic or a theme. Therefore choosing the right corpus of data is crucial. It also assumes documents are produced from a mixture of topics. Those topics then generate words based on their probability distribution.
 
+# Topic Modeling in very simple terms
+
+In LDA, we start with a set of documents (news, piece of texts, books...called the corpus) and our objective is to identify the topics covered by these documents. These are unknown or latent topics. We can reasonably assume that documents with similar topics use similar group of words. We can also assume to be able to find the topics by analyzing group of words occuring together in the documents of the corpus.
+Mathematically, we can model that:
+- documents are probability distribution over the latent topics. A document will be 60% business, 20% politics and 20% sociology for example. Each document will have its own distribution over the set of topics. The set of topics will be defined in relation to the corpus at hand.
+- the unknow topics are themselves probability distribution over words (cf assumption n°1). A vocabulary of words is dereived from the whole corpus. Each word of that vocabulary will have a probability of belonging to a specific topic. Each topic will have probabilities assigned to each word of the vocabulary to belong to that topic.
+
+LDA framework assumes that a mixture of topics generated the corpus of documents. And this mixture led to the vocabulary of words present in the corpus. LDA algorithm will backtrack its assumption to find the set of topics that is likely to have generated the corpus. The steps are :
+- first, define the number of topics we believe are covered in the corpus. This is a key and tricky input which requires some intuiton.
+- second, the algorithm allocates each document to a topic and assigns a probability to each word of belonging to the topic
+- Then it iteratively reallocates and recalculates probabilities until it reaches a fairly stable state where positions do not change anymore.
+
+LDA method requires two major elements:
+- the user must guess at the beginning of the process the number of topics covered in the corpus
+- the user will have to figure out what each hidden topic is looking at its top words, those with highest probabilities to occur within that topic
+
+Conclusion:
 When we do topic modelling, we have to think about topics as a very high-level concept. A topic will gather information which can be broader in scope but still belonging to a more general theme. From the perspective of topic modelling, this is all just one category. In general, classification models that start with labelled categories support much finer distinctions than topic modelling. This is part of the trade-off between supervised and unsupervised learning. The output of such an unsupervised technique is not as precise as the predictions of a text classifier. A supervised technique will allow predictions which cannot be achieved with an unsupervised approach.
 
 # Dataset
