@@ -24,13 +24,14 @@ Mathematically, we can model that:
 - the unknow topics are themselves probability distribution over words (cf assumption n°1). A vocabulary of words is dereived from the whole corpus. Each word of that vocabulary will have a probability of belonging to a specific topic. Each topic will have probabilities assigned to each word of the vocabulary to belong to that topic.
 
 LDA framework assumes that a mixture of topics generated the corpus of documents. And this mixture led to the vocabulary of words present in the corpus. LDA algorithm will backtrack its assumption to find the set of topics that is likely to have generated the corpus. The steps are :
-- first, define the number of topics we believe are covered in the corpus. This is a key and tricky input which requires some intuiton.
-- second, the algorithm allocates each document to a topic and assigns a probability to each word of belonging to the topic
+- first, define the number of topics we believe are covered in the corpus. This is a key and tricky input which requires some intuition.
+- second, the algorithm allocates each document to a topic and assigns a probability to each word to belong to the topic
 - Then it iteratively reallocates and recalculates probabilities until it reaches a fairly stable state where positions do not change anymore.
+- we then obtain how each document is distributed over the K number of topics (K defined at the start), and, for each topic, the probability over the word vocabulary that each word belongs to the topic.
 
 LDA method requires two major elements:
-- the user must guess at the beginning of the process the number of topics covered in the corpus
-- the user will have to figure out what each hidden topic is looking at its top words, those with highest probabilities to occur within that topic
+- the user must guess at the beginning of the process the number of topics covered by the corpus
+- the user will have to figure out what each hidden topic is by looking at its top words, those with highest probabilities to occur within that topic
 
 Conclusion:
 When we do topic modelling, we have to think about topics as a very high-level concept. A topic will gather information which can be broader in scope but still belonging to a more general theme. From the perspective of topic modelling, this is all just one category. In general, classification models that start with labelled categories support much finer distinctions than topic modelling. This is part of the trade-off between supervised and unsupervised learning. The output of such an unsupervised technique is not as precise as the predictions of a text classifier. A supervised technique will allow predictions which cannot be achieved with an unsupervised approach.
